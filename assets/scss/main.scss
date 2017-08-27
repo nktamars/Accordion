@@ -1,0 +1,90 @@
+$mainbg: #f36f4a;
+$location: #620808;
+$music: #a53f3f;
+$notes: #f4ce74;
+$books: #ffe9c1;
+$tendances: #d5441c;
+@font-face {
+  font-family: 'JFFlat';
+  src: url("../font/JF-Flat-regular.woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $mainbg;
+  font-family: 'JFFlat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1366px;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 0 65px;
+}
+
+.accordion {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 380px;
+  cursor: pointer;
+  padding: 23px 0 21px 18px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.location {
+  background-color: $location;
+  color: $books;
+}
+
+.music {
+  background-color: $music;
+  color: $notes;
+}
+
+.notes {
+  background-color: $notes;
+  color: $location;
+}
+
+.books {
+  background-color: $books;
+  color: $music;
+}
+
+.tendances {
+  background-color: $tendances;
+  color: $books;
+}
+
+.panel {
+  width: 380px;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px 1px rgba(150,151,153,0.75);
+  transition: max-height 0.2s ease-out;
+}
+
+img {
+  padding: 0 54px 0 0;
+}
